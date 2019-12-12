@@ -14,5 +14,7 @@ alias dotfiles="/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME"
 # checkout the actual content from the git repository to $HOME
 dotfiles checkout
 
+dotfiles config --local status.showUntrackedFiles no
+
 echo "Verify the following line is in bashrc/zshrc"
 echo 'alias dotfiles="/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME"'
