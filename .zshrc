@@ -28,6 +28,8 @@ alias cdw='cd ~/Downloads'
 alias dotfiles="/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME"
 
 alias agi='sudo apt-get install'
+alias agr='sudo apt-get remove'
+alias agar='sudo apt-get autoremove'
 alias agu='sudo apt-get update'
 alias agug='sudo apt-get update && sudo apt-get upgrade'
 alias ags='sudo apt-cache search'
