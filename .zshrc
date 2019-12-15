@@ -28,7 +28,9 @@ alias cdw='cd ~/Downloads'
 alias dotfiles="/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME"
 
 alias agi='sudo apt-get install'
-alias ags='sudo apt-get search'
+alias agu='sudo apt-get update'
+alias agug='sudo apt-get update && sudo apt-get upgrade'
+alias ags='sudo apt-cache search'
 
 #######################
 # Functions
@@ -71,3 +73,5 @@ SAVEHIST=10000000
 #setopt HIST_REDUCE_BLANKS        # Remove superfluous blanks before recording entry.
 #setopt HIST_VERIFY               # Don't execute immediately upon history expansion.
 #setopt HIST_BEEP                 # Beep when accessing nonexistent history.
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
