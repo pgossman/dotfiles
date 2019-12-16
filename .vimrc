@@ -13,6 +13,7 @@ Plug 'junegunn/fzf.vim'
 Plug 'ycm-core/YouCompleteMe'
 Plug 'scrooloose/nerdcommenter'
 Plug 'sbdchd/neoformat'
+Plug 'psf/black'  " Python Black formatter
 
 call plug#end()
 
@@ -28,9 +29,9 @@ set expandtab " On pressing tab, insert 4 spaces
 
 nnoremap <space><space> :nohlsearch<CR>
 
-"""""""""
+"""""""""""""""
 " OCaml
-"""""""""
+"""""""""""""""
 "/Users/pgossman/.opam/4.06.1/share/merlin
 nnoremap ,t :MerlinTypeOf<CR>
 nnoremap ,f :MerlinLocate<CR>
@@ -39,27 +40,38 @@ augroup ocaml
     autocmd BufWritePre *.ml Neoformat
 augroup END
 
+"""""""""""""""
+" Python
+"""""""""""""""
+"/Users/pgossman/.opam/4.06.1/share/merlin
+nnoremap <F12> :Black<CR>
+nnoremap ,f :MerlinLocate<CR>
+augroup ocaml
+    autocmd!
+    autocmd BufWritePre *.ml Neoformat
+augroup END
 
-"""""""""
+
+"""""""""""""""
 " Fzf
-"""""""""
+"""""""""""""""
 nnoremap ,<space> :Buffers<CR>
 nnoremap ,b :Commands<CR>
 nnoremap ,n :Files<CR>
 nnoremap ,a :Rg<CR>
 
 
-"""""""""
+"""""""""""""""
 " splits
-"""""""""
+"""""""""""""""
 nnoremap <C-l> <C-w><C-l>
 nnoremap <C-k> <C-w><C-k>
 nnoremap <C-j> <C-w><C-j>
 nnoremap <C-h> <C-w><C-h>
 
-"""""""""
+"""""""""""""""
 " vimrc
-"""""""""
+"""""""""""""""
 nnoremap ,vv :e ~/.vimrc<CR>
 augroup vimrc     " Source vim configuration upon save
     autocmd! BufWritePost $MYVIMRC source % | redraw

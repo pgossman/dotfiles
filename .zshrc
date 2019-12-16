@@ -12,6 +12,7 @@ source $ZSH/oh-my-zsh.sh
 #######################
 # Environment variables
 #######################
+export PATH=${PATH}:${HOME}/.local/bin
 export EDITOR='vim'
 export CAEN='login-course-2fa.engin.umich.edu'
 export UNIQNAME='pgossman'
