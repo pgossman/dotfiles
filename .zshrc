@@ -27,6 +27,7 @@ alias todo='vim ~/.todo'
 alias cdd='cd ~/Documents'
 alias cdw='cd ~/Downloads'
 alias dot="/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME"
+alias dotc="dot commit -m"
 
 alias agi='sudo apt-get install'
 alias agr='sudo apt-get remove'
