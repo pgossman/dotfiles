@@ -33,8 +33,8 @@ bindsym $mod+Shift+Escape exec i3lock --color $lockscreencolor
 
 
 # volume control
-bindsym XF86AudioRaiseVolume exec "amixer -q sset Master,0 1+ unmute"
-bindsym XF86AudioLowerVolume exec "amixer -q sset Master,0 1- unmute"
+bindsym XF86AudioRaiseVolume exec "for x in Master Speaker; do amixer -q sset $x 1+ unmute; done"
+bindsym XF86AudioLowerVolume exec "for x in Master Speaker; do amixer -q sset $x 1- unmute; done"
 bindsym XF86AudioMute exec "$HOME/.config/i3/mute_button.sh" 
 
 # music control

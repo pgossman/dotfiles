@@ -26,7 +26,7 @@ alias caen="ssh ${UNIQNAME}@${CAEN}"
 alias todo='vim ~/.todo'
 alias cdd='cd ~/Documents'
 alias cdw='cd ~/Downloads'
-alias dotfiles="/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME"
+alias dot="/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME"
 
 alias agi='sudo apt-get install'
 alias agr='sudo apt-get remove'

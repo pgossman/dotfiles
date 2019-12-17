@@ -9,12 +9,12 @@ if [[ -d .dotfiles ]]; then
 fi
 
 git clone --bare https://github.com/pgossman/dotfiles.git $HOME/.dotfiles
-alias dotfiles="/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME"
+alias dot="/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME"
 
 # checkout the actual content from the git repository to $HOME
-dotfiles checkout
+dot checkout
 
-dotfiles config --local status.showUntrackedFiles no
+dot config --local status.showUntrackedFiles no
 
 echo "Verify the following line is in bashrc/zshrc"
-echo 'alias dotfiles="/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME"'
+echo 'alias dot="/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME"'
