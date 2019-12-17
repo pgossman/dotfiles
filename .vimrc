@@ -26,6 +26,7 @@ colorscheme default
 set tabstop=4 " show existing tab with 4 spaces width
 set shiftwidth=4 " when indenting with '>', use 4 spaces width
 set expandtab " On pressing tab, insert 4 spaces
+set fileformat=unix
 
 nnoremap <space><space> :nohlsearch<CR>
 
@@ -44,11 +45,10 @@ augroup END
 " Python
 """""""""""""""
 "/Users/pgossman/.opam/4.06.1/share/merlin
-nnoremap <F12> :Black<CR>
 nnoremap ,f :MerlinLocate<CR>
-augroup ocaml
+augroup pytn
     autocmd!
-    autocmd BufWritePre *.ml Neoformat
+    autocmd BufWritePre *.py Black
 augroup END
 
 
