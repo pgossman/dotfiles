@@ -1,21 +1,4 @@
-set nocompatible              " be iMproved, required
-
-"Install vim-plug if we ain't got it
-if empty(glob('~/.vim/autoload/plug.vim'))
-  silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs
-    \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
-  autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
-endif
-
-call plug#begin('~/.vim/plugged')
-Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
-Plug 'junegunn/fzf.vim'
-Plug 'ycm-core/YouCompleteMe'
-Plug 'scrooloose/nerdcommenter'
-Plug 'sbdchd/neoformat'
-Plug 'psf/black'  " Python Black formatter
-
-call plug#end()
+set nocompatible  " be iMproved, required
 
 let mapleader = ","
 
@@ -29,6 +12,33 @@ set expandtab " On pressing tab, insert 4 spaces
 set fileformat=unix
 
 nnoremap <space><space> :nohlsearch<CR>
+
+
+"""""""""""""""
+" Plugins
+"""""""""""""""
+"Install vim-plug if we ain't got it
+if empty(glob('~/.vim/autoload/plug.vim'))
+  silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs
+    \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+  autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
+endif
+
+call plug#begin('~/.vim/plugged')
+Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+Plug 'junegunn/fzf.vim'
+Plug 'ycm-core/YouCompleteMe'
+Plug 'scrooloose/nerdcommenter'
+Plug 'sbdchd/neoformat'  " Multi-language formatter
+Plug 'psf/black'  " Python Black formatter
+Plug 'SirVer/ultisnips'  " Snippet engine
+Plug 'honza/vim-snippets'  " Some actual snippets
+call plug#end()
+
+let g:UltiSnipsExpandTrigger="<S-Tab>"
+let g:UltiSnipsJumpForwardTrigger="<C-b>"
+let g:UltiSnipsJumpBackwardTrigger="<C-z>"
+
 
 """""""""""""""
 " OCaml
