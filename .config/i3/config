@@ -10,8 +10,7 @@ font pango:DejaVu Sans Mono 8
 #autostart
 exec --no-startup-id feh --bg-scale /home/paul/.wallpaper.png
 exec --no-startup-id xsettingsd &
-exec --no-startup-id compton -b
-
+exec --no-startup-id compton -b 
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
 
@@ -36,7 +35,7 @@ bindsym $mod+Shift+Escape exec i3lock --color $lockscreencolor
 # volume control
 bindsym XF86AudioRaiseVolume exec "amixer -q sset Master,0 1+ unmute"
 bindsym XF86AudioLowerVolume exec "amixer -q sset Master,0 1- unmute"
-bindsym XF86AudioMute exec "amixer -q sset Master,0 toggle" 
+bindsym XF86AudioMute exec "$HOME/.config/i3/mute_button.sh" 
 
 # music control
 bindsym XF86AudioNext exec mpc next
