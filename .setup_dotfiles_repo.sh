@@ -15,6 +15,3 @@ alias dot="/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME"
 dot checkout
 
 dot config --local status.showUntrackedFiles no
-
-echo "Verify the following line is in bashrc/zshrc"
-echo 'alias dot="/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME"'
