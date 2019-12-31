@@ -11,6 +11,8 @@ set shiftwidth=4 " when indenting with '>', use 4 spaces width
 set expandtab " On pressing tab, insert 4 spaces
 set fileformat=unix
 
+set hlsearch
+set incsearch
 nnoremap <space><space> :nohlsearch<CR>
 
 
