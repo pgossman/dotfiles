@@ -20,7 +20,8 @@ sudo apt-get install \
     rofi \
     xsettingsd \
     lxappearance \
-    scrot
+    scrot \
+    ranger \
 
 pip3 install black
 
