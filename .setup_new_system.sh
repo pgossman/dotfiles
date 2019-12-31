@@ -11,7 +11,16 @@ sudo apt-get install \
 	python3-pip \
 	i3 \
 	feh \
-	compton
+	compton \
+    rxvt-unicode \
+    fonts-inconsolata \
+    fonts-mplis \
+    xsel \
+    rofi \
+    xsettingsd \
+    lxappearance \
+    scrot \
+    viewnoir
 
 pip3 install black
 
