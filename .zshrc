@@ -34,7 +34,15 @@ alias agr='sudo apt-get remove'
 alias agar='sudo apt-get autoremove'
 alias agu='sudo apt-get update'
 alias agug='sudo apt-get update && sudo apt-get upgrade'
-alias ags='sudo apt-cache search'
+alias ags='apt-cache search'
+function agsi {
+    if [[ "$#" -ne 1 ]]; then
+        echo "Needs exactly one argument, have $#";
+        return 1;
+    fi
+    agi $(ags $1 | head -1 | awk '{print $1}')
+}
+
 
 #######################
 # Functions
