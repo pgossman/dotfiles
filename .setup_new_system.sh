@@ -1,17 +1,18 @@
 sudo apt-get install \
-	curl \
-	openssh-server \
-	zsh \
-	vim \
-	emacs \
-	tmux \
-	git \
-	python3 \
-	python-pip \
-	python3-pip \
-	i3 \
-	feh \
-	compton \
+    curl \
+    zsh \
+    openssh-server \
+    blueman \
+    vim \
+    emacs \
+    tmux \
+    git \
+    python3 \
+    python-pip \
+    python3-pip \
+    i3 \
+    feh \
+    compton \
     rxvt-unicode \
     fonts-inconsolata \
     fonts-mplis \
@@ -19,8 +20,7 @@ sudo apt-get install \
     rofi \
     xsettingsd \
     lxappearance \
-    scrot \
-    viewnoir
+    scrot
 
 pip3 install black
 
