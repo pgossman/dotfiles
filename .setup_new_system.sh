@@ -10,6 +10,9 @@ sudo apt-get install \
     python3 \
     python-pip \
     python3-pip \
+    python3-dev \
+    build-essential \
+    cmake \
     i3 \
     feh \
     compton \
@@ -22,6 +25,8 @@ sudo apt-get install \
     lxappearance \
     scrot \
     ranger \
+    opam \
+    m4
 
 pip3 install black
 
