@@ -12,7 +12,7 @@
 *.color8  : #434a5a
 
 ! red
-*.color1  : #bf616a
+*.color1  : #d686b6
 *.color9  : #b3555e
 
 ! green
@@ -43,10 +43,10 @@
 ! Font configuration
 ! ------------------------------------------------------------------------------
 
-URxvt*font:				xft:M+ 1mn:regular:size=8
-URxvt*boldFont:			xft:M+ 1mn:bold:size=8
-URxvt*italicFont:		xft:M+ 1mn:italic:size=8
-URxvt*boldItalicFont:	xft:M+ 1mn:bold italic:size=8
+URxvt*font:				xft:Inconsolata:style=Regular:size=12
+URxvt*boldFont:			xft:Inconsolata:style=Bold:size=12
+URxvt*italicFont:		xft:Inconsolata:style=Italic:size=12
+URxvt*boldItalicFont:	xft:Inconsolata:style=Bold Italic:size=12
 
 ! ------------------------------------------------------------------------------
 ! Xft Font Configuration
@@ -82,7 +82,7 @@ URxvt*externalBorder:	0
 URxvt.geometry:			84x22
 
 ! perl extensions
-URxvt.perl-ext-common:	default,clipboard,url-select,keyboard-select
+URxvt.perl-ext-common:	default,resize-font
 
 ! macros for clipboard and selection
 URxvt.copyCommand:		xclip -i -selection clipboard
@@ -122,7 +122,7 @@ rofi.modi: run,drun,window
 ! Dmenu configs
 ! ------------------------------------------------------------------------------
 
-dmenu.selforeground:	    #d8dee9
-dmenu.background:	        #2e3440
-dmenu.selbackground:	    #bf616a
 dmenu.foreground:	        #d8dee9
+dmenu.background:	        #2e3440
+dmenu.selforeground:	    #d8dee9
+dmenu.selbackground:	    #bf616a
