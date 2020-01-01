@@ -14,6 +14,7 @@ source $ZSH/oh-my-zsh.sh
 #######################
 export PATH=${PATH}:${HOME}/.local/bin
 export EDITOR='vim'
+export TERMINAL='urxvt'
 export CAEN='login-course-2fa.engin.umich.edu'
 export UNIQNAME='pgossman'
 test -r /Users/pgossman/.opam/opam-init/init.zsh && . /Users/pgossman/.opam/opam-init/init.zsh > /dev/null 2> /dev/null || true
