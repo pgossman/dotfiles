@@ -13,11 +13,11 @@ source $ZSH/oh-my-zsh.sh
 # Environment variables
 #######################
 export PATH=${PATH}:${HOME}/.local/bin
+export PATH=${PATH}:${HOME}/.opam/system/bin
 export EDITOR='vim'
 export TERMINAL='urxvt'
 export CAEN='login-course-2fa.engin.umich.edu'
 export UNIQNAME='pgossman'
-test -r /Users/pgossman/.opam/opam-init/init.zsh && . /Users/pgossman/.opam/opam-init/init.zsh > /dev/null 2> /dev/null || true
 
 #######################
 # Aliases
@@ -88,3 +88,6 @@ setopt HIST_VERIFY               # Don't execute immediately upon history expans
 setopt HIST_BEEP                 # Beep when accessing nonexistent history.
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+# OPAM configuration
+. /home/paul/.opam/opam-init/init.zsh > /dev/null 2> /dev/null || true
