@@ -20,6 +20,8 @@ bindsym $mod+Shift+Return exec gnome-terminal
 
 # kill focused window
 bindsym $mod+Shift+q kill
+bindsym $mod+BackSpace kill
+
 
 ##############
 # App keybinds
