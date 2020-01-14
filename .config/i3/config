@@ -31,7 +31,10 @@ bindsym $mod+Shift+d exec i3-dmenu-desktop --dmenu="dmenu -i -fn 'Noto Sans:size
 bindsym $mod+d exec rofi -lines 12 -padding 18 -width 60 -location 0 -show drun -sidebar-mode -columns 3 -font 'Noto Sans 9'
 bindsym Print exec scrot 'Cheese_%a-%d%b%y_%H.%M.png' -e 'viewnior ~/$f'
 
-set $lockscreencolor d014ff # lavender #ff00ff # purple # 00ffc1 # sky blue
+set $lockscreencolor e9a92b #orange
+#set $lockscreencolor d014ff # lavender
+#set $lockscreencolor ff00ff # purple
+#set $lockscreencolor 00ffc1 # sky blue
 bindsym $mod+Shift+Escape exec i3lock --color $lockscreencolor
 
 
