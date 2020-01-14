@@ -9,6 +9,7 @@ general {
 }
 
 order += "load"
+/*order += "memory"*/
 order += "cpu_temperature 0"
 order += "disk /"
 order += "ethernet enp0s25"
@@ -21,8 +22,11 @@ load {
     format = "<span background='#f59335'> %5min Load </span>"
 }
 
+/*memory {*/
+    /*format = "<span background='#81a1c1'> %free </span>"*/
+/*}*/
+
 cpu_temperature 0 {
-    /*format = "<span background='#bf616a'> 🔥 %degrees °C </span>"*/
     format = "<span background='#bf616a'> %degrees °C </span>"
     path = "/sys/class/thermal/thermal_zone0/temp"
 }
