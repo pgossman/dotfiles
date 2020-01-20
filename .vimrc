@@ -37,10 +37,15 @@ Plug 'SirVer/ultisnips'  " Snippet engine
 Plug 'honza/vim-snippets'  " Some actual snippets
 call plug#end()
 
-let g:UltiSnipsExpandTrigger="<S-Tab>"
-let g:UltiSnipsJumpForwardTrigger="<C-b>"
-let g:UltiSnipsJumpBackwardTrigger="<C-z>"
+"let g:ycm_key_list_select_completion=['<C-j>', '<Down>']
+"let g:ycm_key_list_previous_completion=['<C-k>', '<Up>']
 
+"let g:UltiSnipsExpandTrigger="<Tab>"
+"let g:UltiSnipsJumpForwardTrigger="<Tab>"
+"let g:UltiSnipsJumpBackwardTrigger="<S-Tab>"
+let g:UltiSnipsExpandTrigger="<C-j>"
+let g:UltiSnipsJumpForwardTrigger="<C-j>"
+let g:UltiSnipsJumpBackwardTrigger="<C-k>"
 
 """""""""""""""
 " OCaml
@@ -75,6 +80,7 @@ augroup END
 """""""""""""""
 nnoremap ,<space> :Buffers<CR>
 nnoremap ,b :Commands<CR>
+nnoremap ,m :Maps<CR>
 nnoremap ,n :Files<CR>
 nnoremap ,a :Rg<CR>
 
