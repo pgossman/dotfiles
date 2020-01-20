@@ -176,7 +176,7 @@ for_window [class=Viewnior|feh|Audacious|File-roller|Lxappearance|Lxtask|Pavucon
 # color of border, background, text, indicator, and child_border
 client.focused              #bf616a #2f343f #d8dee8 #bf616a #a7acb5
 client.focused_inactive     #2f343f #2f343f #d8dee8 #2f343f #2f343f
-client.unfocused            #2f343f #2f343f #d8dee8 #2f343f #2f343f
+client.unfocused            #2f343f #2f343f #d8dee8 #2f343f #4e5669
 client.urgent               #2f343f #2f343f #d8dee8 #2f343f #2f343f
 client.placeholder          #2f343f #2f343f #d8dee8 #2f343f #2f343f
 client.background           #2f343f
