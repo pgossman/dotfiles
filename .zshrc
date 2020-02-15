@@ -44,6 +44,11 @@ function agsi {
     agi $(ags $1 | head -1 | awk '{print $1}')
 }
 
+alias ga="git add"
+alias gc="git commit"
+alias gs="git status"
+alias gl="git log"
+
 
 #######################
 # Functions
