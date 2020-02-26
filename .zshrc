@@ -17,6 +17,7 @@ export PATH=${PATH}:${HOME}/.opam/system/bin
 export EDITOR='vim'
 export TERMINAL='urxvt'
 export CAEN='login-course-2fa.engin.umich.edu'
+export CAEN_SFTP='sftp.itcs.umich.edu'
 export UNIQNAME='pgossman'
 
 #######################
@@ -58,8 +59,8 @@ function caen_scp_put {
         echo "Needs local file arguments";
         return 1;
     fi
-	echo "scp $@ ${UNIQNAME}@${CAEN}:~"
-	scp $@ ${UNIQNAME}@${CAEN}:~
+	echo "scp $@ ${UNIQNAME}@${CAEN_SFTP}:~"
+	scp $@ ${UNIQNAME}@${CAEN_SFTP}:~
 }
 
 function caen_scp_get {
@@ -67,8 +68,8 @@ function caen_scp_get {
         echo "Needs remote file arguments";
         return 1;
     fi
-	echo "scp ${UNIQNAME}@${CAEN}:$1 $2"
-	scp -r ${UNIQNAME}@${CAEN}:$1 $2
+	echo "scp ${UNIQNAME}@${CAEN_SFTP}:$1 $2"
+	scp -r ${UNIQNAME}@${CAEN_SFTP}:$1 $2
 }
 
 
