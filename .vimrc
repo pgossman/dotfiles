@@ -16,6 +16,23 @@ nnoremap <space><space> :nohlsearch<CR>
 
 set t_Co=16
 
+" Disable mouse by default, enable toggle
+set mouse=
+function! ToggleMouse()
+    " check if mouse is enabled
+    if &mouse == 'a'
+        " disable mouse
+        set mouse=
+    else
+        " enable mouse everywhere
+        set mouse=a
+    endif
+endfunc
+nnoremap <space>r :call ToggleMouse()<CR>
+
+" Search and replace on highlighted text
+vnoremap <C-r> "hy:%s/<C-r>h//gc<left><left><left>
+
 
 """""""""""""""
 " Plugins
