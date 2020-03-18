@@ -38,7 +38,7 @@ bindsym Print exec scrot 'Cheese_%a-%d%b%y_%H.%M.png' -e 'viewnior ~/$f'
 #set $lockscreencolor d014ff # lavender
 set $lockscreencolor ff00ff # purple
 #set $lockscreencolor 00ffc1 # sky blue
-bindsym $mod+Shift+Escape exec i3lock --color $lockscreencolor
+bindsym $mod+Shift+Escape exec i3lock --color $lockscreencolor --ignore-empty-password
 
 
 # volume control
