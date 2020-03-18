@@ -68,6 +68,8 @@ augroup ocaml
     autocmd!
     autocmd FileType ocaml nnoremap <buffer> ,t :MerlinTypeOf<CR>
     autocmd FileType ocaml nnoremap <buffer> ,f :MerlinLocate<CR>
+    " Switch between .ml and .mli files with F4
+    autocmd FileType ocaml nnoremap <buffer> <F4> :e %:p:s,.ml$,.X123X,:s,.mli$,.ml,:s,.X123X$,.mli,<CR>
     autocmd BufWritePre *.ml Neoformat
 augroup END
 
