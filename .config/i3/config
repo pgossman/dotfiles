@@ -21,6 +21,9 @@ bindsym $mod+Shift+Return exec gnome-terminal
 # open ranger
 bindsym $mod+b exec "urxvt -e ranger"
 
+# switch between qwerty and colemak
+bindsym $mod+Shift+k exec /home/paul/.scripts/colemak_toggle.sh
+
 # kill focused window
 bindsym $mod+Shift+q kill
 bindsym $mod+BackSpace kill
