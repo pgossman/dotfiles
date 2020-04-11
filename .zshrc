@@ -1,3 +1,6 @@
+#######################
+# Initialization
+#######################
 export ZSH=/home/paul/.oh-my-zsh
 ZSH_THEME="robbyrussell"
 
@@ -8,6 +11,9 @@ DISABLE_UNTRACKED_FILES_DIRTY="true"
 plugins=(git)
 
 source $ZSH/oh-my-zsh.sh
+
+# gruvbox colorscheme init
+source "$HOME/.vim/plugged/gruvbox/gruvbox_256palette.sh"
 
 #######################
 # Environment variables

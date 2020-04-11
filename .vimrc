@@ -2,9 +2,6 @@ set nocompatible
 
 let mapleader = ","
 
-syntax on
-set number
-
 set tabstop=4 " show existing tab with 4 spaces width
 set shiftwidth=4 " when indenting with '>', use 4 spaces width
 set expandtab " On pressing tab, insert 4 spaces
@@ -14,7 +11,17 @@ set hlsearch
 set incsearch
 nnoremap <space><space> :nohlsearch<CR>
 
-set t_Co=16
+"""""""""""""""
+" Colemak
+"""""""""""""""
+" hjkl
+nnoremap h h
+nnoremap n j
+nnoremap e k
+"nnoremap l i
+" forward search
+nnoremap k n
+
 
 " Disable mouse by default, enable toggle
 set mouse=
@@ -55,11 +62,27 @@ Plug 'psf/black'  " Python Black formatter
 Plug 'SirVer/ultisnips'  " Snippet engine
 Plug 'honza/vim-snippets'  " Some actual snippets
 Plug 'vim-scripts/Conque-GDB'
+Plug 'morhetz/gruvbox'
 call plug#end()
 
 let g:UltiSnipsExpandTrigger="<C-j>"
 let g:UltiSnipsJumpForwardTrigger="<C-j>"
 let g:UltiSnipsJumpBackwardTrigger="<C-k>"
+
+
+"""""""""""""""
+" Color
+"""""""""""""""
+set number
+
+syntax on
+"set t_Co=16 "used with old colorscheme
+set t_Co=256
+set background=dark
+let g:gruvbox_italic=0  " necessesary to avoid inverted comment color
+let g:gruvbox_termcolors=256
+colorscheme gruvbox
+
 
 """""""""""""""
 " OCaml
