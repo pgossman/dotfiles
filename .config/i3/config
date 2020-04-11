@@ -37,12 +37,8 @@ bindsym $mod+Shift+d exec i3-dmenu-desktop --dmenu="dmenu -i -fn 'Noto Sans:size
 bindsym $mod+d exec rofi -lines 12 -padding 18 -width 60 -location 0 -show drun -sidebar-mode -columns 3 -font 'Noto Sans 9'
 bindsym Print exec scrot 'Cheese_%a-%d%b%y_%H.%M.png' -e 'viewnior ~/$f'
 
-#set $lockscreencolor e9a92b #orange
-#set $lockscreencolor d014ff # lavender
-set $lockscreencolor ff00ff # purple
-#set $lockscreencolor 00ffc1 # sky blue
+set $lockscreencolor $(/home/paul/.scripts/i3lock_color.sh) 
 bindsym $mod+Shift+Escape exec i3lock --color $lockscreencolor --ignore-empty-password
-
 
 # volume control
 bindsym XF86AudioRaiseVolume exec "amixer -q -D pulse sset Master 1%+ unmute"
@@ -56,20 +52,12 @@ bindsym XF86AudioPlay exec mpc toggle
 bindsym XF86AudioStop exec mpc stop
 
 # change focus
-bindsym $mod+j focus left
-bindsym $mod+k focus down
-bindsym $mod+l focus up
-bindsym $mod+semicolon focus right
 bindsym $mod+Left focus left
 bindsym $mod+Down focus down
 bindsym $mod+Up focus up
 bindsym $mod+Right focus right
 
 # move focused window
-bindsym $mod+Shift+j move left
-bindsym $mod+Shift+k move down
-bindsym $mod+Shift+l move up
-bindsym $mod+Shift+semicolon move right
 bindsym $mod+Shift+Left move left
 bindsym $mod+Shift+Down move down
 bindsym $mod+Shift+Up move up
