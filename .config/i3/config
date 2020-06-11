@@ -40,6 +40,12 @@ bindsym Print exec scrot 'Cheese_%a-%d%b%y_%H.%M.png' -e 'viewnior ~/$f'
 set $lockscreencolor $(/home/paul/.scripts/i3lock_color.sh) 
 bindsym $mod+Shift+Escape exec i3lock --color $lockscreencolor --ignore-empty-password
 
+# external display control
+bindsym $mod+plus exec /home/paul/.scripts/xrandr_wrapper.py b up
+bindsym $mod+Shift+plus exec /home/paul/.scripts/xrandr_wrapper.py b max
+bindsym $mod+minus exec /home/paul/.scripts/xrandr_wrapper.py b down
+
+
 # volume control
 bindsym XF86AudioRaiseVolume exec "amixer -q -D pulse sset Master 1%+ unmute"
 bindsym XF86AudioLowerVolume exec "amixer -q -D pulse sset Master 1%- unmute"
