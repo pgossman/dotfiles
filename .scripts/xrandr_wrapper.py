@@ -34,7 +34,10 @@ def main():
     is_flag=True,
     help="Keep all workspaces on their current displays",
 )
-def add(left, dont_move_workspaces):
+@click.option(
+    "--high-res", is_flag=True, help="New display is 4k",
+)
+def add(left, dont_move_workspaces, high_res):
     """Add a new display to the right of laptop screen,
     or left with -l
     """
@@ -42,6 +45,11 @@ def add(left, dont_move_workspaces):
     if not connected:
         print("No displays other than the laptop display")
         return
+
+    if high_res:
+        xrandr_mode = ["--mode", "2560x1440"]
+    else:
+        xrandr_mode = ["--auto"]
 
     # Temporarily shut off laptop display to move
     # all workspaces to external monitor
@@ -55,11 +63,12 @@ def add(left, dont_move_workspaces):
                 "--output",
                 connected[0],
                 "--primary",
-                "--auto",
             ]
+            + xrandr_mode
         )
 
     position = "left" if left else "right"
+
     run(
         [
             "xrandr",
@@ -69,11 +78,22 @@ def add(left, dont_move_workspaces):
             "--auto",
             "--output",
             connected[0],
-            "--auto",
             f"--{position}-of",
             LAPTOP_DISPLAY,
         ]
+        + xrandr_mode
     )
+
+
+@main.command()
+def disconnect() -> None:
+    """Disable all external displays and only use laptop screen
+    """
+    connected = [x for x in connected_displays() if x != LAPTOP_DISPLAY]
+    for display in connected:
+        run(
+            ["xrandr", "--output", display, "--off",]
+        )
 
 
 @main.group()
