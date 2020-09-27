@@ -63,6 +63,7 @@ Plug 'SirVer/ultisnips'  " Snippet engine
 Plug 'honza/vim-snippets'  " Some actual snippets
 Plug 'vim-scripts/Conque-GDB'
 Plug 'morhetz/gruvbox'
+Plug 'jackguo380/vim-lsp-cxx-highlight'
 call plug#end()
 
 let g:UltiSnipsExpandTrigger="<C-j>"
