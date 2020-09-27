@@ -31,6 +31,7 @@ export UNIQNAME='pgossman'
 #######################
 alias vi='vim'
 alias caen="ssh ${UNIQNAME}@${CAEN}"
+alias caen_sftp="sftp ${UNIQNAME}@${CAEN}"
 alias todo='vim ~/.todo'
 alias cdd='cd ~/Documents'
 alias cdw='cd ~/Downloads'
