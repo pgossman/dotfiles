@@ -105,6 +105,12 @@ let g:neoformat_ocaml_ocamlformat = {
             \ }
 let g:neoformat_enabled_ocaml = ['ocamlformat']
 
+let g:neoformat_java_uncrustify = {
+        \ 'exe': 'uncrustify',
+        \ 'args': ['-q', '-l JAVA'],
+        \ 'stdin': 1,
+        \ }
+
 
 """""""""""""""
 " cpp
