@@ -88,6 +88,14 @@ URxvt.urlLauncher:		firefox
 URxvt.underlineURLs:	true
 URxvt.urlButton:		1     
 
+! macros for resize-font (zooming)
+URxvt.keysym.C-Up:     font-size:increase
+URxvt.keysym.C-Down:   font-size:decrease
+URxvt.keysym.C-S-Up:   font-size:incglobal
+URxvt.keysym.C-S-Down: font-size:decglobal
+URxvt.keysym.C-equal:  font-size:reset
+URxvt.keysym.C-slash:  font-size:show
+
 ! scroll one line
 URxvt.keysym.Shift-Up:		command:\033]720;1\007
 URxvt.keysym.Shift-Down:	command:\033]721;1\007
