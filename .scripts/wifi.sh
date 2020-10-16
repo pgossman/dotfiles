@@ -29,7 +29,12 @@ has -v nmcli fzf || die
 
 nmcli -d wifi rescan 2> /dev/null
 network=$(nmcli --color yes device wifi | fzf --ansi --height=40% --reverse --cycle --inline-info --header-lines=1)
+
+echo $network
+
 [[ -z "$network" ]] && exit
-network=$(sed -r 's/^\s*\*?\s*//; s/\s*(Ad-Hoc|Infra).*//' <<< "$network")
+network=$(sed -E 's/^\s*\*?\s*//; s/\s*(Ad-Hoc|Infra).*//' <<< "$network")
+network=$(cut -d" " -f3 <<< "$network")
+
 echo "connecting to \"${network}\"..."
 nmcli -a device wifi connect "$network"
