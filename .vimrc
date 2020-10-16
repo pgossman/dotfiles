@@ -54,7 +54,6 @@ endif
 call plug#begin('~/.vim/plugged')
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
-"Plug 'ycm-core/YouCompleteMe'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'scrooloose/nerdcommenter'
 Plug 'sbdchd/neoformat'  " Multi-language formatter
@@ -132,16 +131,6 @@ augroup END
 
 
 let g:clang_format_fallback_style = 'Chromium'
-
-"let g:ycm_always_populate_location_list = 1
-"let g:ycm_language_server =
-  "\ [{
-  "\   'name': 'ccls',
-  "\   'cmdline': [ '/opt/ccls/Release/ccls' ],
-  "\   'filetypes': [ 'c', 'cpp', 'cuda', 'objc', 'objcpp' ],
-  "\   'project_root_files': [ '.ccls-root', 'compile_commands.json' ]
-  "\ }]
-  "
 
 " if hidden is not set, TextEdit might fail.
 set hidden
