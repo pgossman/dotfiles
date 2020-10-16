@@ -61,7 +61,6 @@ Plug 'sbdchd/neoformat'  " Multi-language formatter
 Plug 'psf/black'  " Python Black formatter
 Plug 'SirVer/ultisnips'  " Snippet engine
 Plug 'honza/vim-snippets'  " Some actual snippets
-Plug 'vim-scripts/Conque-GDB'
 Plug 'morhetz/gruvbox'
 Plug 'jackguo380/vim-lsp-cxx-highlight'
 call plug#end()
@@ -115,7 +114,6 @@ let g:neoformat_java_uncrustify = {
 """""""""""""""
 " cpp
 """""""""""""""
-let g:ConqueGdb_Leader = '\'
 function! ClangFormatFile()
   let l:lines="all"
   py3f ~/.vim/clang-format.py
