@@ -132,6 +132,10 @@ augroup END
 
 let g:clang_format_fallback_style = 'Chromium'
 
+
+"""""""""""""""
+" coc.nvim
+"""""""""""""""
 " if hidden is not set, TextEdit might fail.
 set hidden
 
