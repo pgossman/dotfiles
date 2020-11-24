@@ -23,8 +23,8 @@ nnoremap e k
 nnoremap k n
 
 
-" Disable mouse by default, enable toggle
-set mouse=
+" Enable mouse by default, enable toggle
+set mouse=a
 function! ToggleMouse()
     " check if mouse is enabled
     if &mouse == 'a'
