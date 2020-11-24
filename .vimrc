@@ -121,6 +121,11 @@ function! ClangFormatFile()
   py3f ~/.vim/clang-format.py
 endfunction
 
+packadd termdebug
+nnoremap \b :Break<CR>
+nnoremap \n :Next<CR>
+nnoremap \p :Evaluate<CR>
+
 augroup cpp
     autocmd!
     " Format and save with F12
