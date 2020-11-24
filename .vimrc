@@ -72,11 +72,12 @@ let g:UltiSnipsJumpBackwardTrigger="<C-k>"
 """""""""""""""
 " Color
 """""""""""""""
+syntax on
 set number
 
-syntax on
 "set t_Co=16 "used with old colorscheme
 set t_Co=256
+
 set background=dark
 let g:gruvbox_italic=0  " necessesary to avoid inverted comment color
 let g:gruvbox_termcolors=256
@@ -88,8 +89,10 @@ colorscheme gruvbox
 """""""""""""""
 augroup ocaml
     autocmd!
-    autocmd FileType ocaml nnoremap <buffer> ,t :MerlinTypeOf<CR>
-    autocmd FileType ocaml nnoremap <buffer> ,f :MerlinLocate<CR>
+    "autocmd FileType ocaml nnoremap <buffer> ,t :MerlinTypeOf<CR>
+    "autocmd FileType ocaml nnoremap <buffer> ,f :MerlinLocate<CR>
+    "autocmd FileType ocaml nnoremap <buffer> ,r :MerlinOccurrences<CR>
+
     " Switch between .ml and .mli files with F4
     autocmd FileType ocaml nnoremap <buffer> <F4> :e %:p:s,.ml$,.X123X,:s,.mli$,.ml,:s,.X123X$,.mli,<CR>
     autocmd BufWritePre *.ml Neoformat
@@ -306,7 +309,6 @@ augroup vimrc     " Source vim configuration upon save
     autocmd! BufWritePost $MYVIMRC source % | redraw
 augroup END
 
-
 " ## added by OPAM user-setup for vim / base ## 93ee63e278bdfc07d1139a748ed3fff2 ## you can edit, but keep this line
 let s:opam_share_dir = system("opam config var share")
 let s:opam_share_dir = substitute(s:opam_share_dir, '[\r\n]*$', '', '')
@@ -339,8 +341,8 @@ for tool in s:opam_packages
   endif
 endfor
 " ## end of OPAM user-setup addition for vim / base ## keep this line
-" ## added by OPAM user-setup for vim / ocp-indent ## 04adec492ede3739fe2c4ca09e4ca7c6 ## you can edit, but keep this line
+" ## added by OPAM user-setup for vim / ocp-indent ## 8817d088e6c1d314c90837f0e1878d40 ## you can edit, but keep this line
 if count(s:opam_available_tools,"ocp-indent") == 0
-  source "/home/paul/.opam/4.07.1/share/ocp-indent/vim/indent/ocaml.vim"
+  source "/home/paul/.opam/default/share/ocp-indent/vim/indent/ocaml.vim"
 endif
 " ## end of OPAM user-setup addition for vim / ocp-indent ## keep this line
