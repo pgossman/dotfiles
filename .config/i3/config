@@ -38,7 +38,8 @@ bindsym $mod+d exec rofi -lines 12 -padding 18 -width 60 -location 0 -show drun 
 bindsym Print exec scrot 'Cheese_%a-%d%b%y_%H.%M.png' -e 'viewnior ~/$f'
 
 set $lockscreencolor $(/home/paul/.scripts/i3lock_color.sh) 
-bindsym $mod+Shift+Escape exec i3lock --color $lockscreencolor --ignore-empty-password
+bindsym $mod+Escape exec i3lock --color $lockscreencolor --ignore-empty-password
+bindsym $mod+Shift+Escape exec i3lock --color 000000 --ignore-empty-password
 
 # external display control
 bindsym $mod+plus exec /home/paul/.scripts/xrandr_wrapper.py b up
