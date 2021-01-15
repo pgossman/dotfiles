@@ -57,6 +57,8 @@ alias gc="git commit"
 alias gs="git status"
 alias gl="git log"
 
+alias py3="python3"
+
 
 #######################
 # Functions
